@@ -306,7 +306,7 @@ export default BaseAuthenticator.extend({
     @protected
   */
   makeRequest(url, data, headers = {}) {
-    headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+    headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 
     const body = keys(data).map((key) => {
       return `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`;
